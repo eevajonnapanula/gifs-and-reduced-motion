@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import FirstStep from "./FirstStep";
+import SecondStep from "./SecondStep";
 
-function App() {
+import "./index.css";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section>
+      <h1>Reduced Motion GIF-Example</h1>
+      <p>
+        If you don't have the reduced motion-setting on your operating systems
+        level, you should see two identical, moving gifs. You might want to
+        emulate the <code>prefers-reduced-motion</code> media-feature. It can be
+        done at least with Chrome and Edge,{" "}
+        <a href="/">instructions for it can be found from here.</a>
+      </p>
+      <FirstStep />
+      <SecondStep />
+    </section>
   );
 }
-
-export default App;
