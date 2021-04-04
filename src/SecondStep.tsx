@@ -9,11 +9,7 @@ export default function SecondStep() {
   return (
     <section>
       <h2>With controls</h2>
-      {prefersReducedMotion && (
-        <button onClick={handleClick} aria-label="play" aria-pressed={play}>
-          {text}
-        </button>
-      )}
+      {prefersReducedMotion && <button onClick={handleClick}>{text}</button>}
       <picture>
         {!play && (
           <source srcSet="firstFrame.gif" media="(prefers-reduced-motion)" />
